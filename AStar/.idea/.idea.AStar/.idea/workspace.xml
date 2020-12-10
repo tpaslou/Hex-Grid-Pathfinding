@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="88cf284b-7247-4e76-85b5-438dfb6dec43" name="Default Changelist" comment="" />
+    <list default="true" id="88cf284b-7247-4e76-85b5-438dfb6dec43" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AStar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AStar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/GameEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/StarNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/StarNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/33912c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/33912c-mainStage.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AStar/AStar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -27,18 +57,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/GrassNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/MountainNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/Grid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/NodeEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/TextPopup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/GameEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/StarNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/IAStarNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/AStar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/StarNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AStar/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/NodeEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/GameEvents.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1XU9H7J7ghsCou1ehVswnGM2wU1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -103,6 +134,7 @@
       <workItem from="1607349672428" duration="20432000" />
       <workItem from="1607394480959" duration="125000" />
       <workItem from="1607395464800" duration="399000" />
+      <workItem from="1607614026549" duration="3424000" />
     </task>
     <servers />
   </component>
@@ -111,6 +143,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

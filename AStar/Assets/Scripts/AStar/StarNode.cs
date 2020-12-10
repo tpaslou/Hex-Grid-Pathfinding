@@ -32,6 +32,8 @@ namespace AStar
         [SerializeField]
         private  MeshRenderer _renderer;
         private StarNode[,] gridArray;
+        private List<IAStarNode> neighbors;
+        private bool visited;
         private int width, height;
         #endregion
         
@@ -41,14 +43,14 @@ namespace AStar
         //Inherits monobehaviour so init cant happen with contructor
         public void Initialize(int _x , int _y , NodeType _type , int _width , int _height , StarNode[,] grid)
         {
-            
+            neighbors=new List<IAStarNode>();
             width = _width;
             height = _height;
             x = _x;
             y = _y;
             nodeType = _type;
             _renderer = gameObject.GetComponent<MeshRenderer>();
-            
+            visited = false;
             switch (_type)
             {
                 case NodeType.Grass :
@@ -117,40 +119,52 @@ namespace AStar
         {
             get
             {
-                int xOffset = 0;
-                if (y % 2 != 0)
-                    xOffset = 1;
-           
-                //up left
-                if ((y > 0 && x > 0) || (xOffset == 1 && y <height - 1) ||
-                    (y == height - 1 && xOffset == 1))
-                    node = gridArray[y - 1, x + xOffset - 1];
-                if (IsValidNeighbor(node))  yield return node;
-                        
-                //up right
-                if ((y > 0 && x < width - 1) || (xOffset == 1 && x < width - 1) ||
-                    (xOffset == 0 && x == width - 1 && y > 0))
-                    node = gridArray[y - 1, x + xOffset];
-                if (IsValidNeighbor(node))  yield return node;
+                if (!visited)
+                {
+                    int xOffset = 0;
+                    if (y % 2 != 0)
+                        xOffset = 1;
 
-                //mid left
-                if (x > 0) node = gridArray[y, x - 1];
-                if (IsValidNeighbor(node))  yield return node;
-           
-                //mid right
-                if (x < width - 1) node =gridArray[y, x + 1];
-                if (IsValidNeighbor(node))  yield return node;
-            
-                //down left    
-                if ((y < height - 1 && x > 0) || (xOffset == 1 && y < height - 1) ||
-                    (xOffset == 0 && x == width - 1))
-                    node = gridArray[y + 1, x + xOffset - 1];
-                if (IsValidNeighbor(node))  yield return node;
-           
-                //down right
-                if( (y<height-1 && x<width-1) || (xOffset==0 &&x==width-1) )
-                    node = gridArray[y + 1, x + xOffset];
-                if (IsValidNeighbor(node))  yield return node;
+                    //up left
+                    if ((y > 0 && x > 0) || (xOffset == 1 && y < height - 1) ||
+                        (y == height - 1 && xOffset == 1))
+                        node = gridArray[y - 1, x + xOffset - 1];
+                    if (IsValidNeighbor(node)) neighbors.Add(node);
+
+                    //up right
+                    if ((y > 0 && x < width - 1) || (xOffset == 1 && x < width - 1) ||
+                        (xOffset == 0 && x == width - 1 && y > 0))
+                        node = gridArray[y - 1, x + xOffset];
+                    if (IsValidNeighbor(node)) neighbors.Add(node);
+
+                    //mid left
+                    if (x > 0) node = gridArray[y, x - 1];
+                    if (IsValidNeighbor(node)) neighbors.Add(node);
+
+                    //mid right
+                    if (x < width - 1) node = gridArray[y, x + 1];
+                    if (IsValidNeighbor(node)) neighbors.Add(node);
+
+                    //down left    
+                    if ((y < height - 1 && x > 0) || (xOffset == 1 && y < height - 1) ||
+                        (xOffset == 0 && x == width - 1))
+                        node = gridArray[y + 1, x + xOffset - 1];
+                    if (IsValidNeighbor(node)) neighbors.Add(node);
+
+                    //down right
+                    if ((y < height - 1 && x < width - 1) || (xOffset == 0 && x == width - 1))
+                        node = gridArray[y + 1, x + xOffset];
+                    if (IsValidNeighbor(node)) neighbors.Add(node);
+                    visited = true;
+                }
+
+                if (neighbors.Any())
+                {
+                    foreach (IAStarNode nd in neighbors)
+                    {
+                        yield return nd;
+                    }
+                }
 
             }
         }

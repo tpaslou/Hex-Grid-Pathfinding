@@ -11,10 +11,10 @@ public class GameEvents : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
+    } 
 
-    public event Action<StarNode> onNodeClick;
-    public event Action<int> onCostUpdate;
+    public  event Action<StarNode> onNodeClick;
+    public  event Action<int> onCostUpdate;
     public void NodeClick(StarNode node)
     {
         if (onNodeClick != null)
